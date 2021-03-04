@@ -13,17 +13,17 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  jobs:
+    # This workflow contains a single job called "build"
+    build:
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
 
-      - name: Release APK
-        # You may pin to the exact commit or the version.
-        # uses: ShowMeThe/github_action_release@c03188563c3286ccd20cf0d2b1413a134e3cabc9
-        uses: ShowMeThe/github_action_release@v0.01
-        with:
-          # Github secret token to allow automated publishing of APK to release.
-          GITHUB_TOKEN: # optional
+        - name: Release APK
+          # You may pin to the exact commit or the version.
+          # uses: ShowMeThe/github_action_release@c03188563c3286ccd20cf0d2b1413a134e3cabc9
+          uses: ShowMeThe/github_action_release@v0.01
+          with:
+            # Github secret token to allow automated publishing of APK to release.
+            GITHUB_TOKEN: # optional
