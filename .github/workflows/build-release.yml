@@ -50,15 +50,3 @@ jobs:
         with:
           name: latest-build.apk
           path: ./app/build/outputs/apk/debug/app-debug.apk
-
-
-      - name: upload release
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: 'app/build/outputs/apk/release/app-release-unsigned.apk'
-          asset_name: latest-build.apk
-          asset_content_type: application/apk
