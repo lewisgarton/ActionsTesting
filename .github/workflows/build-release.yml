@@ -37,6 +37,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v1
         with:
-          name: app
+          asset_name: latest-build.apk
           path: ./app/build/outputs/apk/debug/app-debug.apk
           asset_content_type: application/apk
