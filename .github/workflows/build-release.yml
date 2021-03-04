@@ -9,16 +9,16 @@ on:
     branches:
       - master
 
-  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-  jobs:
-    build:
-      name: build release
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    name: build release
 
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Release APK
-          uses: ShowMeThe/github_action_release@v0.01
-          with:
-            # Github secret token to allow automated publishing of APK to release.
-            GITHUB_TOKEN: # optional
+    steps:
+      - name: Release APK
+        uses: ShowMeThe/github_action_release@v0.01
+        with:
+          # Github secret token to allow automated publishing of APK to release.
+          GITHUB_TOKEN: # optional
