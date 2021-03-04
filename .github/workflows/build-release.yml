@@ -43,6 +43,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           prerelease: true
-          tag_name: v1.0.0
+          tag_name: v1.1.0
           name: latest-build.apk
           path: ./app/build/outputs/apk/debug/app-debug.apk
